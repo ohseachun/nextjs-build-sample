@@ -30,6 +30,13 @@ export default function Home({ allPostsData }) {
               </small>
             </li>
           ))}
+            <li className={utilStyles.listItem}>
+                <Link href={`/posts/5`}>테스트</Link>
+                <br />
+                <small className={utilStyles.lightText}>
+                    <Date dateString="20230105" />
+                </small>
+            </li>
         </ul>
       </section>
     </Layout>
