@@ -9,7 +9,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: 'export',
+  // output: 'export',
   compiler: {
     // https://nextjs.org/docs/architecture/nextjs-compiler#remove-react-properties
     reactRemoveProperties: { properties: ['^data-testid$'] },

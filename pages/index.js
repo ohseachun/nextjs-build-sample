@@ -34,8 +34,12 @@ export default function Home({ allPostsData }) {
                 <Link href={`/posts/5`}>테스트</Link>
                 <br />
                 <small className={utilStyles.lightText}>
-                    <Date dateString="20230105" />
+                    {/*<Date dateString= />*/}
                 </small>
+            </li>
+            <li className={utilStyles.listItem}>
+                <Link href={`/serverside`}>서버사이트 테스트</Link>
+                <br />
             </li>
         </ul>
       </section>
