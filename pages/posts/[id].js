@@ -12,9 +12,9 @@ export default function Post() {
         <title></title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>할루</h1>
-        <div className={utilStyles.lightText}>
-          <Date dateString="29829892" />
+        <h1>할루</h1>
+        <div>
+          {/*<Date dateString="29829892" />*/}
         </div>
         {/*<div dangerouslySetInnerHTML={{ __html: postData?.contentHtml }} />*/}
       </article>
