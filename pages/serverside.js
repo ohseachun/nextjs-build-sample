@@ -1,5 +1,6 @@
 import Layout, {siteTitle} from "../components/layout";
 import Head from "next/head";
+import Post from "./posts/[id]";
 
 export default function ServerSide({data}) {
 
@@ -17,17 +18,27 @@ export default function ServerSide({data}) {
 }
 
 
-export function getServerSideProps() {
+ServerSide.getInitialProps = async function(ctx) {
+    const res = await fetch('https://api.github.com/repos/vercel/next.js');
+    const json = await res.json();
 
-    console.log("call server side");
+    console.log("json=", json);
 
-    return {
-        props: {
-            // props for your component
-            data: {
-                name: 'John Doe',
-                age:   24,
-            }
-        }
-    }
+    return { stars: json.stargazers_count };
 }
+
+
+// export function getServerSideProps() {
+//
+//     console.log("call server side");
+//
+//     return {
+//         props: {
+//             // props for your component
+//             data: {
+//                 name: 'John Doe',
+//                 age:   24,
+//             }
+//         }
+//     }
+// }
