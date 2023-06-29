@@ -9,7 +9,7 @@ export default function ServerSide({data}) {
                 <title>{siteTitle}</title>
             </Head>
             <div>
-                ServerSide Page... {data.name}
+                ServerSide Page... {data?.name}
             </div>
         </Layout>
     )
