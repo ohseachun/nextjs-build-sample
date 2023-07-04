@@ -41,6 +41,11 @@ export default function Home({ allPostsData }) {
                 <Link href={`/serverside`}>서버사이트 테스트</Link>
                 <br />
             </li>
+
+            <li className={utilStyles.listItem}>
+                <Link href={`/posts/dummy`}>더미 테스트</Link>
+                <br />
+            </li>
         </ul>
       </section>
     </Layout>

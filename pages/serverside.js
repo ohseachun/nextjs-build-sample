@@ -5,7 +5,7 @@ import Post from "./posts/[id]";
 export default function ServerSide({data}) {
 
     return (
-        <Layout home>
+        <Layout>
             <Head>
                 <title>{siteTitle}</title>
             </Head>
@@ -18,27 +18,17 @@ export default function ServerSide({data}) {
 }
 
 
-ServerSide.getInitialProps = async function(ctx) {
-    const res = await fetch('https://api.github.com/repos/vercel/next.js');
-    const json = await res.json();
+export function getServerSideProps() {
 
-    console.log("json=", json);
+    console.log("call server side");
 
-    return { stars: json.stargazers_count };
+    return {
+        props: {
+            // props for your component
+            data: {
+                name: 'John Doe',
+                age:   24,
+            }
+        }
+    }
 }
-
-
-// export function getServerSideProps() {
-//
-//     console.log("call server side");
-//
-//     return {
-//         props: {
-//             // props for your component
-//             data: {
-//                 name: 'John Doe',
-//                 age:   24,
-//             }
-//         }
-//     }
-// }
