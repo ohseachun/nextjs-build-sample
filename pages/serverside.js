@@ -21,6 +21,7 @@ export default function ServerSide({data}) {
 export function getServerSideProps() {
 
     console.log("call server side");
+    console.debug("call server side");
 
     return {
         props: {
