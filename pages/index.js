@@ -38,12 +38,12 @@ export default function Home({ allPostsData }) {
                 </small>
             </li>
             <li className={utilStyles.listItem}>
-                <Link href={`/serverside`}>서버사이트 테스트</Link>
+                <Link href={`/serverside`}>서버사이트 테스트2</Link>
                 <br />
             </li>
 
             <li className={utilStyles.listItem}>
-                <Link href={`/posts/dummy`}>더미 테스트</Link>
+                <Link href={`/posts/dummy`}>더미 테스트2</Link>
                 <br />
             </li>
         </ul>
